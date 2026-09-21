@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Catálogo: tienda deportiva con ropa, calzado, accesorios y equipamiento para entrenar y moverte mejor.">
+	<title>Catálogo | Tienda Deportiva</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="site-header">
+		<a class="brand" href="#inicio" aria-label="Catálogo, inicio">
+			<span class="brand-mark" aria-hidden="true">C</span>
+			<span><strong>Catálogo</strong><small>tienda deportiva</small></span>
+		</a>
+		<nav class="main-nav" aria-label="Navegación principal">
+			<a href="#inicio">Inicio</a>
+			<a href="#catalogo">Catálogo</a>
+			<a href="#contacto">Contacto</a>
+		</nav>
+		<button class="cart-button" id="open-cart" type="button" aria-label="Abrir carrito">
+			<span aria-hidden="true">🛒</span><b id="cart-count">0</b>
+		</button>
+	</header>
+
+	<main>
+		<section class="hero" id="inicio">
+			<div class="hero-copy">
+				<p class="eyebrow">Ropa, calzado y equipamiento para movernos mejor</p>
+				<h1>Todo para entrenar, correr y rendir.</h1>
+				<p class="hero-text">Catálogo trae para ti la mejor selección en ropa deportiva, accesorios, balones y zapatillas para cada estilo de vida activo.</p>
+				<a class="button button-primary" href="#catalogo">Explorar catálogo <span aria-hidden="true">↗</span></a>
+			</div>
+			<div class="hero-art" aria-label="Catálogo como fondo" role="img">
+				<span class="art-logo" aria-hidden="true">CATÁLOGO</span>
+			</div>
+		</section>
+
+		<section class="intro-strip" aria-label="Beneficios de comprar en Catálogo">
+			<div><span>◌</span><p><strong>Calidad y rendimiento</strong><small>Marcas y productos confiables</small></p></div>
+			<div><span>⌁</span><p><strong>Asesoría deportiva</strong><small>Te orientamos según tu actividad</small></p></div>
+			<div><span>↗</span><p><strong>Compra práctica</strong><small>Pedido por WhatsApp y retiro en tienda</small></p></div>
+		</section>
+
+		<section class="section shop-story" aria-labelledby="shop-story-title">
+			<div class="story-copy">
+				<p class="eyebrow">Nuestra tienda</p>
+				<h2 id="shop-story-title">Más que una tienda: tu punto de entrenamiento.</h2>
+				<p>En Catálogo entendemos que cada persona activa tiene necesidades distintas: correr más, entrenar con fuerza, jugar con estilo o moverse cada día con comodidad.</p>
+				<p>Somos una tienda física pensada para acompañarte en cada paso: con asesoría cercana, productos de calidad y un catálogo completo para que elijas lo ideal para tu actividad.</p>
+			</div>
+			<div class="shop-cards" aria-label="Detalles de la tienda física">
+				<article class="shop-card">
+					<span class="shop-icon">✦</span>
+					<h3>Asesoría deportiva</h3>
+					<p>Te ayudamos a elegir la mejor prenda, calzado o accesorio según tu disciplina.</p>
+				</article>
+				<article class="shop-card">
+					<span class="shop-icon">⌂</span>
+					<h3>Retiro en local</h3>
+					<p>Compras online y puedes retirar tu pedido en la tienda con atención rápida y personalizada.</p>
+				</article>
+				<article class="shop-card">
+					<span class="shop-icon">◎</span>
+					<h3>Calidad en cada detalle</h3>
+					<p>Elegimos marcas con buen rendimiento, confort y estilo para cada rutina.</p>
+				</article>
+			</div>
+		</section>
+
+		<section class="visit-section" aria-labelledby="visit-title">
+			<div class="visit-copy">
+				<p class="eyebrow">Visítanos</p>
+				<h2 id="visit-title">Te esperamos en nuestra tienda deportiva.</h2>
+				<p>Pasa por el local para ver el calzado, probar prendas y recibir recomendaciones que te ayuden a entrenar con más comodidad y confianza.</p>
+			</div>
+			<div class="shop-hours" aria-label="Horarios de la tienda">
+				<div><span>Lunes a viernes</span><strong>9:00 - 18:30</strong></div>
+				<div><span>Sábados</span><strong>9:00 - 14:00</strong></div>
+				<div><span>Dirección</span><strong>Carrera 3a #16 47</strong></div>
+			</div>
+		</section>
+
+		<section class="section featured-section" aria-labelledby="featured-title">
+			<div class="section-heading"><div><p class="eyebrow">Nuestros favoritos</p><h2 id="featured-title">Para empezar bonito</h2></div><a class="text-link" href="#catalogo">Ver todo <span aria-hidden="true">→</span></a></div>
+			<div class="product-grid" id="featured-products" aria-live="polite"></div>
+		</section>
+
+		<section class="section catalog-section" id="catalogo" aria-labelledby="catalog-title">
+			<div class="section-heading catalog-heading"><div><p class="eyebrow">La tienda completa</p><h2 id="catalog-title">Encuentra tu próximo ritual</h2></div><span class="product-total" id="product-total"></span></div>
+			<div class="catalog-tools">
+				<label class="search-box"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Buscar por nombre..." autocomplete="off"><span class="sr-only">Buscar productos</span></label>
+				<label class="select-box"><span class="sr-only">Filtrar por categoría</span><select id="category-filter"><option value="todos">Todas las categorías</option></select></label>
+			</div>
+			<div class="product-grid" id="product-grid" aria-live="polite"></div>
+			<p class="empty-state" id="empty-state" hidden>No encontramos productos con esa búsqueda. Prueba con otro nombre o categoría.</p>
+			<nav class="catalog-pagination" id="catalog-pagination" aria-label="Paginación del catálogo"></nav>
+		</section>
+
+		<section class="contact-section" id="contacto" aria-labelledby="contact-title">
+			<div><p class="eyebrow">Estamos para ayudarte</p><h2 id="contact-title">Hablemos de rendimiento y estilo</h2><p>¿Tenés dudas sobre una talla, un producto o un pedido especial? Escribinos y te orientamos como si estuvieras en el local.</p><a class="button button-light" href="https://wa.me/573001234567" target="_blank" rel="noopener">Escribir por WhatsApp <span aria-hidden="true">↗</span></a></div>
+			<address><div><span class="contact-icon">⌖</span><p><strong>Visítanos</strong><br>Carrera 3a #16 47<br>Colombia Puerto Boyaca / Boyaca</p></div><div><span class="contact-icon">☏</span><p><strong>Escríbenos</strong><br><a href="tel:+573001234567">+57 300 123 4567</a></p></div><div><span class="contact-icon">◎</span><p><strong>Encuéntranos</strong><br><a href="https://instagram.com/catalogo.shop" target="_blank" rel="noopener">@catalogo.shop</a></p></div></address>
+		</section>
+	</main>
+
+	<footer class="site-footer"><span>© 2026 Catálogo</span><span>Ropa, calzado y energía para moverte mejor.</span></footer>
+
+	<aside class="cart-drawer" id="cart-drawer" aria-hidden="true" aria-labelledby="cart-title">
+		<div class="drawer-header"><div><p class="eyebrow">Tu selección</p><h2 id="cart-title">Mi carrito</h2></div><button class="icon-button" id="close-cart" type="button" aria-label="Cerrar carrito">×</button></div>
+		<div class="cart-items" id="cart-items"></div>
+		<div class="cart-empty" id="cart-empty"><span aria-hidden="true">✦</span><p>Tu carrito está esperando algo rico.</p><a href="#catalogo" id="browse-products">Ver productos</a></div>
+		<div class="cart-footer" id="cart-footer"><div><span>Total</span><strong id="cart-total">$0</strong></div><a class="button button-primary whatsapp-button" id="whatsapp-order" href="#" target="_blank" rel="noopener">Finalizar por WhatsApp <span aria-hidden="true">↗</span></a><small>Te llevaremos a WhatsApp para confirmar tu pedido y coordinar retiro o entrega.</small></div>
+	</aside>
+	<div class="drawer-overlay" id="drawer-overlay"></div>
+
+	<dialog class="product-dialog" id="product-dialog"><button class="dialog-close icon-button" id="close-dialog" type="button" aria-label="Cerrar detalle">×</button><div id="dialog-content"></div></dialog>
+	<div class="toast" id="toast" role="status" aria-live="polite"></div>
+	<script src="productos-local.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
