@@ -141,6 +141,13 @@ body { font-size: 16px; line-height: 1.55; }
 	.product-image { aspect-ratio: 1 / 1; }
 	.catalog-section { padding-left: max(8%, calc((100% - 1280px) / 2)); padding-right: max(8%, calc((100% - 1280px) / 2)); }
 	.visit-section { padding-bottom: 100px; padding-top: 100px; }
+	.catalog-section { width: 100%; }
+	.catalog-section .section-heading,
+	.catalog-section .catalog-tools,
+	.catalog-section .product-grid,
+	.catalog-section .empty-state,
+	.catalog-section .catalog-pagination { width: 100%; }
+	.catalog-section .product-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); justify-items: stretch; }
 }
 
 @media (max-width: 649px) {
