@@ -46,7 +46,7 @@
     "nombre": "Hoodie Training Urban",
     "precio": 135000,
     "categoria": "Ropa deportiva",
-    "foto": "https://images.unsplash.com/photo-1521417531038-928ec267f3b3?auto=format&fit=crop&w=900&q=80",
+    "foto": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=900&q=80",
     "descripcion": "Hoodie con tejido suave y abrigo medio para frío ligero.",
     "beneficios": "Cálido, cómodo y elegante para usar antes o después del entrenamiento.",
     "modo_uso": "Ideal para calentamiento, outdoor y uso casual.",
